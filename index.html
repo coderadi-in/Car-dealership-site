@@ -144,8 +144,8 @@
 
                             <div class="input-group res-row h-sb gap-10">
                                 <label for="loanTenure">Loan Tenure</label>
-                                <input type="text" name="loanTenure" id="loanTenure" class="input"
-                                    placeholder="(years)" value="2">
+                                <input type="text" name="loanTenure" id="loanTenure" class="input" placeholder="(years)"
+                                    value="2">
                             </div>
                         </div>
 
@@ -167,10 +167,162 @@
                         </div>
                     </div>
 
-                    <div class="stat animatable visuals">
+                    <div class="stat animatable visuals center">
                         <canvas id="amountChart"></canvas>
                     </div>
                 </div>
+            </section>
+        </section>
+
+        <section class="tradein">
+            <section class="section column gap-50">
+                <div class="head column v-center gap-10">
+                    <h1 class="h1">Upgrade your drive</h1>
+                    <p class="para">Share a few details and our team will provide a personalized exchange offer within
+                        minutes.</p>
+                </div>
+
+                <form action="#" method="post" class="form column v-center gap-40">
+                    <div class="wizard column gap-20">
+                        <h2 class="h2">Vehicle details</h2>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="brand">Brand</label>
+                            <input required type="text" name="brand" id="brand" class="input">
+                        </div>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="model">Model</label>
+                            <input required type="text" name="model" id="model" class="input">
+                        </div>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="year">Year of Manufacture</label>
+                            <input required type="number" name="year" id="year" class="input">
+                        </div>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="km">Kilometers Driven</label>
+                            <input required type="number" name="km" id="km" class="input">
+                        </div>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="fuel">Fuel Type</label>
+                            <select name="fuel" id="fuel" class="input">
+                                <option value="petrol">Petrol</option>
+                                <option value="diesel">Diesel</option>
+                                <option value="hybrid">Hybrid</option>
+                                <option value="electric">Electric</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="transmission">Transmission</label>
+                            <select name="transmission" id="transmission" class="input">
+                                <option value="manual">Manual</option>
+                                <option value="auto">Automatic</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="wizard column gap-20">
+                        <h2 class="h2">Vehicle Condition</h2>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="overallCondition">Overall condition</label>
+                            <select name="overallCondition" id="overallCondition" class="input">
+                                <option value="excellent">Excellent</option>
+                                <option value="good">Good</option>
+                                <option value="fair">Fair</option>
+                                <option value="needsRepair">Needs repair</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="accidentHistory">Accident history</label>
+                            <select name="accidentHistory" id="accidentHistor" class="input">
+                                <option value="no">No</option>
+                                <option value="minor">Minor</option>
+                                <option value="major">Major</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="numberOfOwners">Number of owners</label>
+                            <input required type="number" name="numberOfOwners" id="numberOfOwners" class="input">
+                        </div>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="serviceHistory">Service history available?</label>
+                            <select name="serviceHistory" id="serviceHistory" class="input">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="uploadPhotos">Upload photos (recommended)</label>
+
+                            <div class="column gap-5">
+                                <input type="file" name="uploadPhotos" id="uploadPhotos" class="input" multiple
+                                    accept="image/*">
+                                <span class="mini">Photos help us offer a more precise valuation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wizard column gap-20">
+                        <h2 class="h2">Your Next Upgrade</h2>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="timeLine">When are you planning to upgrade?</label>
+                            <select name="timeLine" id="timeLine" class="input">
+                                <option value="immediately">Immediately</option>
+                                <option value="within30">Within 30 days</option>
+                                <option value="justValue">Just checking value</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="interest">Preferred vehicle type</label>
+                            <select name="interest" id="interest" class="input">
+                                <option value="sedan">Sedan</option>
+                                <option value="suv">SUV</option>
+                                <option value="luxury">Luxury</option>
+                                <option value="notDecided">Not decided</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="wizard column gap-20">
+                        <h2 class="h2">Receive Your Valuation</h2>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="name">Full name</label>
+                            <input required type="text" name="name" id="name" class="input">
+                        </div>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="mobileNumber">Mobile number</label>
+                            <input required type="tel" name="mobileNumber" id="mobileNumber" class="input">
+                        </div>
+
+                        <div class="input-group row gap-10">
+                            <input type="checkbox" name="sameWhatsapp" id="sameWhatsapp" class="input">
+                            <label for="sameWhatsapp">Contact me on WhatsApp</label>
+                        </div>
+
+                        <div class="input-group res-row h-sb gap-10">
+                            <label for="email">Email (optional)</label>
+                            <input type="email" name="email" id="email" class="input">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="link btn icon-fl">
+                        <span class="text">Get My Trade-In Value</span>
+                        <span class="symbol">keyboard_arrow_right</span>
+                    </button>
+                </form>
             </section>
         </section>
     </main>

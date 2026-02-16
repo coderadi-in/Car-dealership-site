@@ -12,6 +12,7 @@ const tenure = document.getElementById('loanTenure');
 const heroSection = document.querySelector(".hero");
 const featuredSection = document.querySelector(".featured");
 const financeSection = document.querySelector(".finance");
+const tradeInSection = document.querySelector(".tradein");
 
 // ! INTERSECTION OBSERVER VALUES
 const observerOptions = {
@@ -133,7 +134,7 @@ document.body.addEventListener('click', (e) => {
 });
 
 // & PREPARING OBSERVABLES LIST
-const observables = [heroSection, featuredSection, financeSection];
+const observables = [heroSection, featuredSection, financeSection, tradeInSection];
 
 // & OBSERVING OBSERVABLE SECTIONS
 observables.forEach((elem) => {

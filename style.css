@@ -91,11 +91,40 @@
 
 .finance .numbers .input {
     border: none;
-    background-color: #348e72;
+    background-color: #348E72;
     text-align: end;
 }
+/* | FINANCE [END] */
+
+/* | TRADE-IN [START] */
+.tradein .wizard {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.tradein .wizard .input-group label,
+.tradein .wizard .input-group .input {width: 100%;}
+.tradein .wizard .input {background-color: #348E72;}
+
+.tradein .wizard .input[type="checkbox"] {width: fit-content;}
+.tradein .wizard .btn {margin: 0 auto;}
 
 /* & RESPONSIVE VERSIONS */
+@media (max-width: 1024px) {
+    .finance .body {flex-direction: column;}
+}
+
+@media (max-width: 768px) {
+    .tradein .wizard .input-group {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
 @media (max-width: 568px) {
     .header .menu .text.title {display: none;}
     .nav {padding: 20px;}

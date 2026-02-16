@@ -13,7 +13,7 @@
 
     --text: #F6F6F6;
     --text-secondary: #B8BDC3;
-    --border: #FFFFFF0D;
+    --border: #27272A;
 
     --f0: 10px;
     --f1: 16px;
@@ -255,9 +255,9 @@ body {
 label {font-family: "Inter", sans-serif;}
 
 .input {
-    border: 1px solid var(--border);
+    border: none;
     color: var(--text);
-    background-color: transparent;
+    background-color: var(--border);
     font-family: "Inter", sans-serif;
     outline: none;
     padding: 10px;
