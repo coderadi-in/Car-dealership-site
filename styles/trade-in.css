@@ -1,0 +1,73 @@
+.tradein .form {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.expand-fullscreen {
+    transition: all 0.5s ease-in-out;
+    top: 0 !important;
+}
+
+.tradein .wizard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tradein .wizard .close-tradeIn-btn {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: var(--board-1);
+    backdrop-filter: blur(10px);
+}
+
+.tradein .wizard .bg.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.tradein .wizard .bg-res.img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.tradein .wizard .content {
+    height: 100%;
+    padding: 20px;
+    max-width: 1696px;
+    margin: 0 auto;
+}
+
+.tradein .wizard .content .input {
+    background-color: var(--board-1);
+    border-left: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    border-radius: 0 0 0 5px;
+    max-width: 900px;
+    backdrop-filter: blur(3px);
+}
+
+.tradein .wizard .content .input::placeholder {
+    color: var(--text-secondary);
+}
+
+.tradein .wizard .content .btn {margin-left: auto;}
+
+@media (max-width: 768px) {
+    .tradein .wizard .bg.img {display: none;}
+    .tradein .wizard .bg-res {display: flex !important;}
+}
