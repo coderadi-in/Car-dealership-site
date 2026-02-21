@@ -183,16 +183,16 @@
                         minutes.</p>
 
                     <div class="btn icon-fl" id="tradeInOpen">
-                        <span class="text title">OPEN TRADE-IN FORM</span>
+                        <span class="text title">TRADE-IN</span>
                         <span class="symbol">expand_content</span>
                     </div>
                 </div>
 
                 <div class="transformer">
-                    <form action="" method="post" class="form">
-                        <div class="wizard">
+                    <form action="#" method="post" class="form" enctype="multipart/form-data">
+                        <div class="wizard wizard1">
                             <div class="content column h-en gap-20">
-                                <h2 class="h2">Vehicle Details</h2>
+                                <h2 class="h2">Vehicle details</h2>
 
                                 <input required type="text" name="brandName" id="brandName" class="input"
                                     placeholder="Brand">
@@ -201,10 +201,10 @@
                                 <input required type="text" name="yearManufacture" id="yearManufacture" class="input"
                                     placeholder="Year of manufacture">
                                 <input required type="number" name="kmDriven" id="kmDriven" class="input"
-                                    placeholder="Kilometers Driven">
+                                    placeholder="Kilometers driven">
 
                                 <select required name="fuelType" id="fuelType" class="input">
-                                    <option value="">Fuel Type</option>
+                                    <option value="">Fuel type</option>
                                     <option value="petrol">Petrol</option>
                                     <option value="diesel">Diesel</option>
                                     <option value="hybrid">Hybrid</option>
@@ -217,7 +217,7 @@
                                     <option value="automatic">Automatic</option>
                                 </select>
 
-                                <div class="btn icon-fl disabled">
+                                <div class="btn sub-btn icon-fl disabled">
                                     <span class="text">Continue</span>
                                     <span class="symbol">keyboard_arrow_right</span>
                                 </div>
@@ -228,8 +228,129 @@
                                 <span class="text">Close</span>
                             </div>
 
-                            <img src="assets/step-1-bg.png" alt="Background Image" class="bg img">
-                            <img src="assets/step-1.png" alt="Background Image" class="bg-res img">
+                            <img src="assets/step-1-bg.png" alt="Background Image" class="bg img" loading="lazy" decoding="async">
+                            <img src="assets/step-1.png" alt="Background Image" class="bg-res img" loading="lazy" decoding="async">
+                        </div>
+
+                        <div class="wizard wizard2 hide">
+                            <div class="content column h-en gap-20">
+                                <h2 class="h2">Vehicle condition</h2>
+
+                                <select required name="overallCondition" id="overallCondition" class="input">
+                                    <option value="">Overall condition</option>
+                                    <option value="excellent">Excellent</option>
+                                    <option value="good">Good</option>
+                                    <option value="fair">Fair</option>
+                                    <option value="needsRepair">Needs repair</option>
+                                </select>
+
+                                <select required name="repairHistory" id="repairHistory" class="input">
+                                    <option value="">Repair history</option>
+                                    <option value="none">None</option>
+                                    <option value="minor">Minor</option>
+                                    <option value="major">Major</option>
+                                </select>
+
+                                <input required type="number" name="previousOwners" id="previousOwners" class="input"
+                                    placeholder="Number of previous owners">
+
+                                <select required name="serviceHistory" id="serviceHistory" class="input">
+                                    <option value="">Service record available?</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+
+                                <div class="column gap-5">
+                                    <input multiple type="file" name="uploadPhotos" id="uploadPhotos" class="input"
+                                        placeholder="Upload photos (recommended)" accept="image/*">
+                                    <span class="mini">Photos help us offer a more precise valuation</span>
+                                </div>
+
+                                <div class="btn sub-btn icon-fl disabled">
+                                    <span class="text">Continue</span>
+                                    <span class="symbol">keyboard_arrow_right</span>
+                                </div>
+                            </div>
+
+                            <div class="btn icon-ot close-tradeIn-btn">
+                                <span class="symbol">collapse_content</span>
+                                <span class="text">Close</span>
+                            </div>
+
+                            <img src="assets/step-2-bg.png" alt="Background Image" class="bg img" loading="lazy" decoding="async">
+                            <img src="assets/step-2.png" alt="Background Image" class="bg-res img" loading="lazy" decoding="async">
+                        </div>
+
+                        <div class="wizard wizard3 hide">
+                            <div class="content column h-en gap-20">
+                                <h2 class="h2">Your next upgrade</h2>
+
+                                <select required name="timeLine" id="timeLine" class="input">
+                                    <option value="">When you're planning to upgrade?</option>
+                                    <option value="immediately">Immediately</option>
+                                    <option value="within30Days">Within 30 days</option>
+                                    <option value="justCheckingValue">Just checking value</option>
+                                </select>
+
+                                <select required name="interestedType" id="interestedType" class="input">
+                                    <option value="">Preferred vehicle type</option>
+                                    <option value="sedan">Sedan</option>
+                                    <option value="suv">SUV</option>
+                                    <option value="luxury">Luxury</option>
+                                    <option value="none">Not decided yet</option>
+                                </select>
+
+                                <input type="number" name="budgetEstimate" id="budgetEstimate" class="input"
+                                    placeholder="Estimated budget (optional)">
+
+                                <div class="btn sub-btn icon-fl disabled">
+                                    <span class="text">Continue</span>
+                                    <span class="symbol">keyboard_arrow_right</span>
+                                </div>
+                            </div>
+
+                            <div class="btn icon-ot close-tradeIn-btn">
+                                <span class="symbol">collapse_content</span>
+                                <span class="text">Close</span>
+                            </div>
+
+                            <img src="assets/step-3-bg.png" alt="Background Image" class="bg img" loading="lazy" decoding="async">
+                            <img src="assets/step-3.png" alt="Background Image" class="bg-res img" loading="lazy" decoding="async">
+                        </div>
+
+                        <div class="wizard wizard4 hide">
+                            <div class="content column h-en gap-20">
+                                <h3 class="h3">Receive Your Valuation</h3>
+
+                                <input required type="text" name="name" id="name" class="input" placeholder="Full name">
+                                <input required type="tel" name="phone" id="phone" class="input"
+                                    placeholder="Mobile number">
+
+                                <div class="row gap-10">
+                                    <input type="checkbox" name="contactOnWhatsapp" id="contactOnWhatsapp"
+                                        class="input">
+                                    <label for="contactOnWhatsapp">Contact me on WhatsApp</label>
+                                </div>
+
+                                <div class="column gap-5">
+                                    <input type="email" name="email" id="email" class="input"
+                                        placeholder="Email (optional)">
+                                    <span class="mini">We respect your privacy. No spam. No obligations.</span>
+                                </div>
+
+                                <button class="link btn sub-btn icon-fl disabled">
+                                    <span class="text">Get My Trade-In Value</span>
+                                    <span class="symbol">start</span>
+                                </button>
+                            </div>
+
+                            <div class="btn icon-ot close-tradeIn-btn">
+                                <span class="symbol">collapse_content</span>
+                                <span class="text">Close</span>
+                            </div>
+
+                            <img src="assets/step-4-bg.png" alt="Background Image" class="bg img" loading="lazy" decoding="async">
+                            <img src="assets/step-4.png" alt="Background Image" class="bg-res img" loading="lazy" decoding="async">
                         </div>
                     </form>
                 </div>
@@ -239,7 +360,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"></script>
     <script type="module" src="scripts/header.js"></script>
-    <script type="module" src="scripts/chart.js"></script>
     <script type="module" src="scripts/observer.js"></script>
     <script type="module" src="scripts/finance.js"></script>
     <script type="module" src="scripts/trade-in.js"></script>

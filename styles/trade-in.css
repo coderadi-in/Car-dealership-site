@@ -1,24 +1,32 @@
+/* | TRANSFORMER [START] */
 .tradein .transformer {
     display: none;
     position: fixed;
-    width: 0;
-    height: 0;
     top: 50%;
     left: 50%;
-    background-color: var(--border);
+    width: 0;
+    height: 0;
     border-radius: 50vw;
+    background-color: var(--border);
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: all 0.6s ease-in-out;
+    
+    transition: 
+        width 0.6s ease-in-out,
+        height 0.6s ease-in-out,
+        border-radius 0.6s ease-in-out;
 }
 
 .tradein .transformer.expand-fullscreen {
-    width: 100vw;
-    height: 100vh;
     border-radius: 0;
     pointer-events: all;
+    width: 100vw;
+    height: 100dvh;
+    transform: translate(-50%, -50%);
 }
+/* | TRANSFORMER [END] */
 
+/* | FORM [START] */
 .tradein .transformer.expand-fullscreen .form {
     opacity: 1;
 }
@@ -28,32 +36,30 @@
     height: 100%;
     opacity: 0;
 }
+/* | FORM [END] */
 
+/* | WIZARD [START] */
 .tradein .wizard {
     position: relative;
     width: 100%;
     height: 100%;
+    z-index: 1;
+    will-change: transform, opacity;
+    
+    transition: 
+        transform 0.4s ease-in-out,
+        opacity 0.4s ease-in-out;
 }
 
 .tradein .wizard .close-tradeIn-btn {
     position: absolute;
     top: 100px;
     right: 20px;
-    background-color: var(--board-1);
-    backdrop-filter: blur(10px);
+    background: rgba(20,20,20,0.85);
 }
 
-.tradein .wizard .bg.img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
+.tradein .wizard .bg.img,
 .tradein .wizard .bg-res.img {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -61,6 +67,8 @@
     object-fit: cover;
     z-index: -1;
 }
+
+.tradein .wizard .bg-res.img {display: none;}
 
 .tradein .wizard .content {
     height: 100%;
@@ -75,15 +83,22 @@
     border-bottom: 1px solid var(--border);
     border-radius: 0 0 0 5px;
     max-width: 900px;
-    backdrop-filter: blur(3px);
+    background: rgba(20,20,20,0.85);
 }
 
-.tradein .wizard .content .input::placeholder {
-    color: var(--text-secondary);
-}
-
+.tradein .wizard .content .input::placeholder {color: var(--text-secondary);}
 .tradein .wizard .content .btn {margin-left: auto;}
+/* | WIZARD [END] */
 
+/* | WIZARD HIDE-ANIM [START] */
+.tradein .wizard.hide {
+    transform: translateY(-60px);
+    opacity: 0;
+    z-index: -1;
+}
+/* | WIZARD HIDE-ANIM [END] */
+
+/* & RESPONSIVENESS */
 @media (max-width: 768px) {
     .tradein .wizard .bg.img {display: none;}
     .tradein .wizard .bg-res {display: flex !important;}
