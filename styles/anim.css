@@ -54,8 +54,8 @@
 .finance .animatable:nth-child(2) {transition-delay: 100ms;}
 /* | FINANCE [END] */
 
-/* | TRADEIN [START] */
-/* .tradein .wizard {
+/* | TESTIMONIALS [START] */
+.testimonials .review {
     transform: translateY(60px);
     opacity: 0;
     transition: 
@@ -63,12 +63,14 @@
         opacity 0.6s ease-in-out;
 }
 
-.tradein.visible .wizard {
+.testimonials.visible .review {
     transform: translateY(0);
     opacity: 1;
-} */
+}
 
-.tradein .wizard:nth-child(1) {transition-delay: 0ms;}
-.tradein .wizard:nth-child(2) {transition-delay: 100ms;}
-.tradein .wizard:nth-child(3) {transition-delay: 2000ms;}
-.tradein .wizard:nth-child(4) {transition-delay: 3000ms;}
+.testimonials .review:nth-child(1) {transition-delay: 0ms;}
+.testimonials .review:nth-child(2) {transition-delay: 100ms;}
+.testimonials .review:nth-child(3) {transition-delay: 200ms;}
+.testimonials .review:nth-child(4) {transition-delay: 300ms;}
+.testimonials .review:nth-child(5) {transition-delay: 400ms;}
+/* | TESTIMONIALS [END] */

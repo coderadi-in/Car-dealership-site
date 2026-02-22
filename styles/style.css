@@ -50,6 +50,55 @@
 .nav .list .link:hover {color: var(--text-secondary);}
 /* | HEADER & NAVBAR [END] */
 
+/* | STICKY [START] */
+.sticky {
+    position: fixed;
+    z-index: 1;
+    bottom: 20px;
+    right: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.sticky .link {
+    cursor: pointer;
+    background-color: var(--text);
+    color: var(--background);
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.sticky .movable {
+    z-index: -1;
+    opacity: 0;
+
+    transition:
+        transform 0.4s ease-in-out,
+        opacity 0.4s ease-in-out;
+}
+
+.sticky .movable:nth-child(1) {
+    transform: translate(65px, 65px) rotate(360deg);
+    transition-delay: 100ms;
+}
+
+.sticky .movable:nth-child(2) {
+    transform: translate(0, 65px) rotate(360deg);
+    transition-delay: 0ms;
+}
+
+.sticky .movable:nth-child(3) {
+    transform: translate(65px, 0) rotate(360deg);
+    transition-delay: 200ms;
+}
+
+.sticky.open .movable {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+    z-index: 1;
+}
+
 /* | HERO [START] */
 .hero {
     height: 100dvh;
@@ -96,12 +145,24 @@
 }
 /* | FINANCE [END] */
 
-/* & RESPONSIVE VERSIONS */
+/* | TESTIMONIALS [START] */
+.testimonials .grid {grid-template-columns: repeat(3, 1fr);}
+.testimonials .review {
+    padding: 16px;
+    border-radius: 16px;
+    min-width: 280px;
+}
+
+.testimonials .review .logo {background-color: var(--border);}
+
+/* & RESPONSIVENESS */
 @media (max-width: 1024px) {
     .finance .body {flex-direction: column;}
+    .testimonials .grid {grid-template-columns: repeat(2, 1fr);}
 }
 
 @media (max-width: 568px) {
     .header .menu .text.title {display: none;}
     .nav {padding: 20px;}
+    .testimonials .grid {grid-template-columns: 1fr;}
 }

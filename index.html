@@ -53,6 +53,24 @@
     </nav>
 
     <main class="main column gap-100">
+        <div class="sticky">
+            <a href="#trade-in" class="link movable">
+                <span class="symbol fl-icon">swap_driving_apps</span>
+            </a>
+
+            <a href="#" class="link movable">
+                <span class="symbol fl-icon">call</span>
+            </a>
+
+            <a href="https://wa.me/919044791312?text=Hi, I'd like to speak with a sales advisor about your available models." class="link movable">
+                <img src="assets/whatsapp.png" alt="WhatsApp Icon" class="icon">
+            </a>
+
+            <div class="link" id="toggleStickyNav">
+                <span class="symbol fl-icon">support_agent</span>
+            </div>
+        </div>
+
         <section class="hero">
             <section class="section column center gap-20">
                 <h1 class="h1 animatable">Avenue Imports</h1>
@@ -175,7 +193,7 @@
             </section>
         </section>
 
-        <section class="tradein">
+        <section class="tradein" id="trade-in">
             <section class="section column gap-50">
                 <div class="head column v-center gap-10">
                     <h1 class="h1">Upgrade your drive</h1>
@@ -189,7 +207,7 @@
                 </div>
 
                 <div class="transformer">
-                    <form action="#" method="post" class="form" enctype="multipart/form-data">
+                    <form action="/" method="post" class="form" enctype="multipart/form-data">
                         <div class="wizard wizard1">
                             <div class="content column h-en gap-20">
                                 <h2 class="h2">Vehicle details</h2>
@@ -356,6 +374,61 @@
                 </div>
             </section>
         </section>
+
+        <section class="testimonials">
+            <section class="section column gap-50">
+                <div class="head column v-center gap-10">
+                    <h1 class="h1">Reviews</h1>
+                </div>
+
+                <div class="body grid gap-50">
+                    <div class="review column gap-10">
+                        <div class="row gap-10">
+                            <span class="logo"></span>
+                            <span class="text title">Rahul Mehta, Business Owner</span>
+                        </div>
+
+                        <p class="para">The entire experience felt effortless. From the test drive to delivery, everything was handled professionally. Easily the most premium dealership experience I've had.</p>
+                    </div>
+
+                    <div class="review column gap-10">
+                        <div class="row gap-10">
+                            <span class="logo"></span>
+                            <span class="text title">Sneha Kapoor, Entrepreneur</span>
+                        </div>
+
+                        <p class="para">We upgraded to our SUV through their exchange program. The valuation was fair, transparent, and surprisingly quick. The team took care of everything.</p>
+                    </div>
+
+                    <div class="review column gap-10">
+                        <div class="row gap-10">
+                            <span class="logo"></span>
+                            <span class="text title">Arjun Verma, Tech Consultant</span>
+                        </div>
+
+                        <p class="para">I was purchasing my first luxury vehicle and had a lot of questions. The staff guided me without any pressure. It felt more like consulting than selling.</p>
+                    </div>
+
+                    <div class="review column gap-10">
+                        <div class="row gap-10">
+                            <span class="logo"></span>
+                            <span class="text title">Karan Malhotra, Marketing Director</span>
+                        </div>
+
+                        <p class="para">Their trade-in process was smooth and professional. I shared my details online and received a valuation the same day. Upgrading my car was incredibly simple.</p>
+                    </div>
+
+                    <div class="review column gap-10">
+                        <div class="row gap-10">
+                            <span class="logo"></span>
+                            <span class="text title">Priya Sharma, Architect</span>
+                        </div>
+
+                        <p class="para">Attention to detail is what sets them apart. From paperwork to delivery day, everything was handled with precision. Highly recommended.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"></script>
@@ -363,6 +436,7 @@
     <script type="module" src="scripts/observer.js"></script>
     <script type="module" src="scripts/finance.js"></script>
     <script type="module" src="scripts/trade-in.js"></script>
+    <script type="module" src="scripts/sticky.js"></script>
     <script type="module" src="scripts/script.js"></script>
 </body>
 

@@ -49,11 +49,11 @@ function checkRequiredInputs(inputArray, btn) {
 // * FUNCTION TO TRANSIT FROM WIZARD A TO WIZARD B
 function transit(wizardA, wizardB) {
     wizardA.classList.add('hide');
-    wizardB.classList.remove('hide');
 
     setTimeout(() => {
         wizardA.style.display = "none";
-    }, 200);
+        wizardB.classList.remove('hide');
+    }, 400);
 }
 
 // ==================================================
