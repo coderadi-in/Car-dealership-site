@@ -79,22 +79,22 @@
 }
 
 .sticky .movable:nth-child(1) {
-    transform: translate(65px, 65px) rotate(360deg);
+    transform: translate(65px, 65px);
     transition-delay: 100ms;
 }
 
 .sticky .movable:nth-child(2) {
-    transform: translate(0, 65px) rotate(360deg);
+    transform: translate(0, 65px);
     transition-delay: 0ms;
 }
 
 .sticky .movable:nth-child(3) {
-    transform: translate(65px, 0) rotate(360deg);
+    transform: translate(65px, 0);
     transition-delay: 200ms;
 }
 
 .sticky.open .movable {
-    transform: translate(0, 0) rotate(0);
+    transform: translate(0, 0);
     opacity: 1;
     z-index: 1;
 }
